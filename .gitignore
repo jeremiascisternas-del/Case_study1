@@ -1,0 +1,12 @@
+# Resultados reproducibles y librería local
+/resultados/
+/Rlib/
+
+# Estado local de R y del editor
+.Rhistory
+.RData
+.Ruserdata
+.Rproj.user/
+.vscode/
+.DS_Store
+Thumbs.db

@@ -5,10 +5,8 @@ INSTRUCCIONES DE USO Y REQUISITOS DEL PROYECTO
 1. ¿QUÉ SE NECESITA? (REQUISITOS PREVIOS)
 --------------------------------------------
 - Entorno: R (Versión 4.0.0 o superior).
-- Paquetes de R requeridos:
-  * Procesamiento: data.table, dplyr, lubridate, readr
-  * Modelado e inferencia: ranger, glmnet, sandwich, lmtest, car
-  * Visualización: ggplot2, gridExtra
+- Paquetes de R requeridos: rpart, randomForest, gbm, glmnet.
+- Opcional en RStudio: rstudioapi para detectar la ruta del documento guardado.
 - Archivos de datos requeridos en la carpeta 'datos/':
   * train.csv
   * features.csv
@@ -19,10 +17,11 @@ INSTRUCCIONES DE USO Y REQUISITOS DEL PROYECTO
 Paso 1: Descargar/Descomprimir la carpeta raíz 'walmart_proyecto' en su equipo.
 Paso 2: Abrir RStudio o la consola de R.
 Paso 3: Abrir y ejecutar completamente el script principal:
-        codigo/walmart_analysis.2.1ma (1).R
+        codigo/walmart_analysis.R
 
-* Nota de ejecución: El script incluye detección universal y automática del directorio 
-  de trabajo, por lo que NO es necesario configurar manualmente 'setwd()'.
+* Ejecución recomendada desde la raíz del repositorio:
+        Rscript codigo/walmart_analysis.R
+  En RStudio, la detección del documento requiere rstudioapi y un archivo guardado.
 
 3. RESULTADOS GENERADOS
 -----------------------
@@ -36,9 +35,9 @@ junto con sus subcarpetas ('graficos/' y 'binarios/'), exportando:
 Por otro lado, se adjunta orden del proyecto, y como se imprimen los resultados;
 
 walmart_proyecto/                 <-- Carpeta raíz del proyecto 
-├── Instrucciones_de_uso.txt                     <-- Archivo con instrucciones para los evaluadores
+├── docs/instrucciones_de_uso.txt                     <-- Archivo con instrucciones para los evaluadores
 ├── codigo/
-│   └── walmart_analysis.2.1ma (1).R <-- Script principal de R (detección universal de ruta)
+│   └── walmart_analysis.R <-- Script principal de R (detección universal de ruta)
 ├── datos/
 │   ├── train.csv                 <-- Ventas históricas (Kaggle)
 │   ├── features.csv              <-- Datos de entorno (clima, combustible, MarkDowns)
